@@ -52,7 +52,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!136 &8573312916404804509
 CapsuleCollider:
@@ -64,10 +64,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.66979396
-  m_Height: 1.8301196
+  m_Radius: 0.24370182
+  m_Height: 1.834878
   m_Direction: 1
-  m_Center: {x: 0, y: 1.9757836, z: 0.32180572}
+  m_Center: {x: 0, y: 1.9734044, z: 0.0007546246}
 --- !u!114 &8573312916404804496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,10 +118,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
-  m_Radius: 0.3977096
-  m_Height: 1.377434
+  m_Radius: 0.36367488
+  m_Height: 1.4817704
   m_Direction: 2
-  m_Center: {x: -0.008151054, y: 2.4973843, z: 0.28370035}
+  m_Center: {x: -0.008151054, y: 2.4732335, z: 0.33586854}
 --- !u!1 &8573312917913092372
 GameObject:
   m_ObjectHideFlags: 0
