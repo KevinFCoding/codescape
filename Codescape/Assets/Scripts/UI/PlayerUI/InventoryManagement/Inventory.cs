@@ -1,13 +1,24 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
 
 public class Inventory : MonoBehaviour {
-    // Use this for initialization
-    void Start() {
 
+    public static Inventory instance;
+
+    public List<Item> items = new List<Item>();
+
+
+    private void Awake() {
+        instance = this;
         }
 
-    // Update is called once per frame
-    void Update() {
+    public void AddItem(Item item) {
+        items.Add(item);
+        }
 
+    public void RemoveItem(Item item) {
+        items.Remove(item);
         }
     }
