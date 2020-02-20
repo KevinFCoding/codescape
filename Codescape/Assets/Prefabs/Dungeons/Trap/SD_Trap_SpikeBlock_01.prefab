@@ -12,7 +12,12 @@ GameObject:
   - component: {fileID: 3303856}
   - component: {fileID: 2377904}
   - component: {fileID: 9537714}
-  - component: {fileID: 5850561996570035440}
+  - component: {fileID: 7529227585912493157}
+  - component: {fileID: 2939959734697787227}
+  - component: {fileID: 6358701966514772841}
+  - component: {fileID: 2500246228278367616}
+  - component: {fileID: 5952382643675861231}
+  - component: {fileID: 7851148458720944180}
   m_Layer: 0
   m_Name: SD_Trap_SpikeBlock_01
   m_TagString: Untagged
@@ -100,7 +105,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &5850561996570035440
+--- !u!65 &7529227585912493157
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,5 +116,70 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 1.9377403, z: 5}
-  m_Center: {x: 0, y: -0.86905384, z: 0}
+  m_Size: {x: 4.138555, y: 0.98666716, z: 4.099189}
+  m_Center: {x: 0.00998044, y: -1.1372044, z: 0.0068422556}
+--- !u!65 &2939959734697787227
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 0.6570201, z: 5}
+  m_Center: {x: 0, y: -0.3237636, z: 0}
+--- !u!65 &6358701966514772841
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3359828, y: 7.6283326, z: 0.3331566}
+  m_Center: {x: -1.844125, y: 3.619951, z: 1.8920379}
+--- !u!65 &2500246228278367616
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.24372315, y: 7.4094467, z: 0.2705679}
+  m_Center: {x: -1.8878485, y: 3.729394, z: -1.8703561}
+--- !u!65 &5952382643675861231
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36988688, y: 7.788232, z: 0.27153826}
+  m_Center: {x: 1.9378304, y: 3.5400014, z: -1.8616636}
+--- !u!65 &7851148458720944180
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2968228, y: 8.030503, z: 0.2414856}
+  m_Center: {x: 1.9094332, y: 3.4188657, z: 1.8712089}

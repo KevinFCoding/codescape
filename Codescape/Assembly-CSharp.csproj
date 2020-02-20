@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerUI\Interactable.cs" />
     <Compile Include="Assets\Scripts\PlayerUI\InventoryManagement\Inventory.cs" />
+    <Compile Include="Assets\Scripts\PlayerUI\InventoryManagement\Item.cs" />
     <Compile Include="Assets\Scripts\PlayerUI\InventoryManagement\ItemPickUp.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
