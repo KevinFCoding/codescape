@@ -391,7 +391,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SoundName: Button
 --- !u!1001 &230397317
-
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -586,7 +585,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 200, y: 140}
+  m_CellSize: {x: 300, y: 200}
   m_Spacing: {x: 6, y: 6}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -1527,7 +1526,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915652922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -170}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.47913435, y: 0.41889542, z: 0.15553088}
   m_Children:
   - {fileID: 644970535}
@@ -1536,7 +1535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 350, y: 74}
+  m_AnchoredPosition: {x: 656, y: 106.7}
   m_SizeDelta: {x: 332.4, y: 161.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &915652924
@@ -2189,7 +2188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8.700012, y: -197.1}
+  m_AnchoredPosition: {x: 9, y: -293}
   m_SizeDelta: {x: -92.3, y: -278.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1722767003
