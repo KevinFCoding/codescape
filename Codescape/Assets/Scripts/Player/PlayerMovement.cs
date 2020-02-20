@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     float maxSlope = 90f;
 
+    public bool IsInTraps { get; set; }
+
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
@@ -20,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        IsInTraps = false;
         m_InitialSpeed = m_TranslationSpeed;
     }
 
@@ -83,4 +86,14 @@ public class PlayerMovement : MonoBehaviour
     {
         isFalling = true;
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Traps"))
+        {
+            IsInTraps = true;
+        }
+    }
+
 }
