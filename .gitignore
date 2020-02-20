@@ -2,6 +2,9 @@
 
 # Visual Studio cache directory
 .vs/
+./Codescape/Assembly-CSharp.csproj
+./Codescape/Assembly-CSharp.sln
+./Codescape/Codescape.sln
 
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
@@ -26,9 +29,5 @@ Codescape/Temp/
 Codescape/Library/
 
 Codescape/obj/
-./Codescape/Assembly-CSharp.csproj
-./Codescape/Assembly-CSharp.sln
-./Codescape/Codescape.sln
-
 
 Codescape/Packages/manifest.json

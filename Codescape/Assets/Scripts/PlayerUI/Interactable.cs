@@ -2,43 +2,33 @@
 
 public class Interactable : MonoBehaviour {
 
-    public float radius = 3f; // range of interaction
+    [SerializeField] float radius = 2f; // range of interaction
+    public bool IsInCollision = false;
+    [SerializeField] private GameObject textOverlay;
 
-    bool IsInRange = false;
-    public bool IsDoorOpen = false;
-    Transform player;
+    public void OnCollisionEnter(Collision collision) {
 
-    public void Update() {
-            if (IsInRange) {
-            float Distance = Vector3.Distance(player.position, transform.position);
-
-            if (Distance <= radius) {
-                Debug.Log("INTERACT MOTHERFUCKER");
-                }
-            }
-          }
-
-    private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("player")) {
-            GameObject.FindGameObjectsWithTag("Door1");
-            }
+        Debug.Log("Player in collision");
+        IsInCollision = true;
+        textOverlay.SetActive(true);
+        Interact();
         }
-        
-    public void OpenDoor() {
-        IsDoorOpen = !IsDoorOpen;
-        }
-    //public void IsFocused(Transform playerTransform) {
-    //    IsInRange = true;
-    //    player = playerTransform;
-    //    }
 
-    //public void IsUnFocused() {
-    //    IsInRange = false;
-    //    player = null;
-    //    }
+
+    public void OnCollisionExit(Collision collision) {
+        Debug.Log("Player leaving collision");
+        IsInCollision = false;
+        textOverlay.SetActive(false);
+        }
+
 
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, radius);
+        }
+
+
+    public virtual void Interact() {
+        Debug.Log("Base of the interact method"); // WIll be use to add to inventory and manage doors
         }
     }
