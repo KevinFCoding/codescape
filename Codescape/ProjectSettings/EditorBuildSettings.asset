@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TrapsTests.unity
+    guid: 31ef5d65cad164f16a163b98c78b44a9
+  - enabled: 0
+    path: Assets/LevelDesign.unity
+    guid: e7a1c39ceda9445f0839df22b7ec2645
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Scenes/main.unity
+    guid: b85675cd15be64472a944722f9fc888a
   m_configObjects: {}
