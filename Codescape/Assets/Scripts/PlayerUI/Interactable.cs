@@ -32,3 +32,4 @@ public class Interactable : MonoBehaviour {
         Debug.Log("Base of the interact method"); // WIll be use to add to inventory and manage doors
         }
     }
+    
