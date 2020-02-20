@@ -11,3 +11,17 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+./Codescape/[Ll]ibrary/
+./Codescape/[Tt]emp/
+./Codescape/[Bb]uild/
+./Codescape/[Bb]uilds/
+./Codescape/[Oo]bj/
+./Codescape/[Ll]ogs/
+./Codescape/[Uu]ser[Ss]ettings/
+
+
+Codescape/Temp/
+
+Codescape/Library/
+
+Codescape/obj/

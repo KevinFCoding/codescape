@@ -19,7 +19,7 @@ public class Interactable : MonoBehaviour {
           }
 
     private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("lever1")) {
+        if (collision.gameObject.CompareTag("player")) {
             GameObject.FindGameObjectsWithTag("Door1");
             }
         }
