@@ -1,4 +1,5 @@
 
+
 # Visual Studio cache directory
 .vs/
 
@@ -18,10 +19,14 @@
 ./Codescape/[Oo]bj/
 ./Codescape/[Ll]ogs/
 ./Codescape/[Uu]ser[Ss]ettings/
-
+./Codescape/[Uu]ser[Ss]ettings/
 
 Codescape/Temp/
 
 Codescape/Library/
 
 Codescape/obj/
+./Codescape/Assembly-CSharp.csproj
+./Codescape/Assembly-CSharp.sln
+./Codescape/Codescape.sln
+
