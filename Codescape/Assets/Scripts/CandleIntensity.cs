@@ -16,6 +16,6 @@ public class CandleIntensity : MonoBehaviour
     void Update()
     {
         //light.intensity = Random.Range(1f, 4f);
-        light.intensity =  5 + (Mathf.PerlinNoise(Time.time, 0f));
+        light.intensity =  2 + (Mathf.PerlinNoise(Time.time, 0f));
     }
 }
