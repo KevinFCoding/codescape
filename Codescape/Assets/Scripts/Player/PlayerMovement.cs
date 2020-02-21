@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public bool IsInTraps { get; set; }
     public bool IsInVictory { get; set; }
 
+    Inventory inventaire;
+
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
@@ -31,10 +33,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Movement();
-        Jump();
-        Run();
-
+        if (!InventoryUI.IsInventoryActivated()) {
+            Movement();
+            Jump();
+            Run();
+            }
     }
 
     private void Jump()
