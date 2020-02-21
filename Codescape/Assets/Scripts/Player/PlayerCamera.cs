@@ -27,24 +27,37 @@ public class PlayerCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (axes == RotationAxis.MouseX)
-        {
-            transform.Rotate(0, Input.GetAxis("Mouse X") * m_sensHorizontal, 0);
-        }
-        else if (axes == RotationAxis.MouseY)
-        {
-            _rotationX -= Input.GetAxis("Mouse Y") * m_sensVertical;
-            _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
 
-            float rotationY = transform.localEulerAngles.y;
+        if (!InventoryUI.IsInventoryActivated()) {
 
-            transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
-        }
+            if (axes == RotationAxis.MouseX) {
+                transform.Rotate(0, Input.GetAxis("Mouse X") * m_sensHorizontal, 0);
+                }
+            else if (axes == RotationAxis.MouseY) {
+                _rotationX -= Input.GetAxis("Mouse Y") * m_sensVertical;
+                _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+
+                float rotationY = transform.localEulerAngles.y;
+
+                transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
+                }
+
+            LockCursor();
+            }
+
+        else {
+            UnlockCursor();
+            }
+
     }
 
     private void LockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+    private void UnlockCursor() {
+        Cursor.lockState = CursorLockMode.None;
+        }
 
 }

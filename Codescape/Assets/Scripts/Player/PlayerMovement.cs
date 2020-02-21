@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsInTraps { get; set; }
     public bool IsInVictory { get; set; }
+
+    Inventory inventaire;
 
     private void Awake()
     {
@@ -30,10 +33,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Movement();
-        Jump();
-        Run();
-
+        if (!InventoryUI.IsInventoryActivated()) {
+            Movement();
+            Jump();
+            Run();
+            }
     }
 
     private void Jump()
