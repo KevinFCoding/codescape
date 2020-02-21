@@ -5,8 +5,10 @@ using UnityEngine;
 public class TrapsMovement : MonoBehaviour
 {
     [SerializeField] float m_TranslationSpeed;
+    [SerializeField] float m_RangeOfMovement;
+
     bool isMoving = false;
-    bool isDescending = true;
+    [SerializeField] bool isDescending;
     float m_StartPosition;
 
     // Start is called before the first frame update
@@ -19,7 +21,7 @@ public class TrapsMovement : MonoBehaviour
     void Update()
     {
 
-        if (transform.position.y > m_StartPosition - 10 && isDescending)
+        if (transform.position.y > m_StartPosition - m_RangeOfMovement && isDescending)
         {
             transform.position = new Vector3(transform.position.x, (float)transform.position.y - m_TranslationSpeed, transform.position.z);
         }
