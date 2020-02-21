@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     float m_InitialSpeed;
     [SerializeField] float m_TranslationSpeed;
     Rigidbody m_Rigidbody;
+    [SerializeField] float m_JumpForce;
 
     bool isFalling = false;
 
@@ -42,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (jInput > 0 && !isFalling)
         {
-            GetComponent<Rigidbody>().velocity = new Vector3(0, 4, 0);
+            GetComponent<Rigidbody>().velocity = new Vector3(0, m_JumpForce, 0);
         }
         isFalling = true;
     }
@@ -101,6 +102,11 @@ public class PlayerMovement : MonoBehaviour
         {
             IsInVictory = true;
         }
+        if (collision.gameObject.CompareTag("FalseTraps"))
+        {
+            Destroy(GameObject.FindWithTag("FalseTraps"));
+        }
+
     }
 
 }
