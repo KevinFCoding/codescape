@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2500246228278367616}
   - component: {fileID: 5952382643675861231}
   - component: {fileID: 7851148458720944180}
+  - component: {fileID: 3938818123334162035}
   m_Layer: 0
   m_Name: SD_Trap_SpikeBlock_01
   m_TagString: Untagged
@@ -183,3 +184,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2968228, y: 8.030503, z: 0.2414856}
   m_Center: {x: 1.9094332, y: 3.4188657, z: 1.8712089}
+--- !u!114 &3938818123334162035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0012f49f1b4b405b8538c9f33ae407d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TranslationSpeed: 0
+  m_RangeOfMovement: 0
+  isDescending: 0
