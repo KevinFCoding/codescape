@@ -40,7 +40,7 @@ public class Interactable : MonoBehaviour {
 
 
     public virtual void Interact() {
-        Debug.Log("Base of the interact method"); // WIll be use to add to inventory and manage doors
+        //Debug.Log("Base of the interact method"); // WIll be use to add to inventory and manage doors
         }
     }
     

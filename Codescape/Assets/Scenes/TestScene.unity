@@ -7970,19 +7970,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 454270, guid: 0c3d10cdbefe7ef47bccd382245c83ac, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 454270, guid: 0c3d10cdbefe7ef47bccd382245c83ac, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.70639235
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 454270, guid: 0c3d10cdbefe7ef47bccd382245c83ac, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 454270, guid: 0c3d10cdbefe7ef47bccd382245c83ac, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7078206
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 454270, guid: 0c3d10cdbefe7ef47bccd382245c83ac, type: 3}
       propertyPath: m_RootOrder
@@ -7994,7 +7994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 454270, guid: 0c3d10cdbefe7ef47bccd382245c83ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -270.116
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 454270, guid: 0c3d10cdbefe7ef47bccd382245c83ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -14123,7 +14123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c9f476c20ca4cf8a7cc9dbdc4d966f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
   itemsParent: {fileID: 269071828}
+  slots: []
   inventoryUI: {fileID: 2067403678}
 --- !u!114 &592239287
 MonoBehaviour:
@@ -18241,13 +18243,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 789587470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc18cd04b66ea4e42aae947eb4758955, type: 3}
+  m_Script: {fileID: 11500000, guid: 458ad7b9eee4c489ca27f0ce5b651634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
   IsInCollision: 0
   textOverlay: {fileID: 1474854328}
   textOverlay2: {fileID: 1370105908}
+  IsDoorOpen: 0
 --- !u!65 &789587472
 BoxCollider:
   m_ObjectHideFlags: 0
