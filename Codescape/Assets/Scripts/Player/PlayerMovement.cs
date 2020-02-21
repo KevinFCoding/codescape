@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
     float m_InitialSpeed;
     [SerializeField] float m_TranslationSpeed;
     Rigidbody m_Rigidbody;
@@ -12,49 +13,57 @@ public class PlayerMovement : MonoBehaviour {
 
     float maxSlope = 90f;
 
+    public bool IsInTraps { get; set; }
+    public bool IsInVictory { get; set; }
 
-    private void Awake() {
+    private void Awake()
+    {
         m_Rigidbody = GetComponent<Rigidbody>();
-        }
-
-    // Start is called before the first frame update
-    void Start() {
-        m_InitialSpeed = m_TranslationSpeed;
-
-        }
-
-    private void FixedUpdate() {
-
-        if (!InventoryUI.IsInventoryActivated()) {
-
-            Movement();
-            Jump();
-            Run();
-            }
-        
     }
 
-    private void Jump() {
+    // Start is called before the first frame update
+
+    void Start()
+    {
+        IsInTraps = false;
+        m_InitialSpeed = m_TranslationSpeed;
+    }
+
+    private void FixedUpdate()
+    {
+        Movement();
+        Jump();
+        Run();
+
+    }
+
+    private void Jump()
+    {
         float jInput = Input.GetAxis("Jump");
 
-        if (jInput > 0 && !isFalling) {
+        if (jInput > 0 && !isFalling)
+        {
             GetComponent<Rigidbody>().velocity = new Vector3(0, 4, 0);
-            }
-        isFalling = true;
         }
+        isFalling = true;
+    }
 
-    private void Run() {
+    private void Run()
+    {
         float rInput = Input.GetAxis("Run");
 
-        if (rInput > 0) {
+        if (rInput > 0)
+        {
             m_TranslationSpeed = m_InitialSpeed * 2;
-            }
-        else {
-            m_TranslationSpeed = m_InitialSpeed;
-            }
         }
+        else
+        {
+            m_TranslationSpeed = m_InitialSpeed;
+        }
+    }
 
-    private void Movement() {
+    private void Movement()
+    {
         float vInput = Input.GetAxis("Vertical");
         float hInput = Input.GetAxis("Horizontal");
 
@@ -62,20 +71,38 @@ public class PlayerMovement : MonoBehaviour {
         Vector3 vect_side = transform.right * m_TranslationSpeed * Time.fixedDeltaTime * hInput;
 
         m_Rigidbody.MovePosition(transform.position + vect_forward + vect_side);
-        }
+    }
 
-    private void OnCollisionStay(Collision collision) {
-        foreach (ContactPoint contact in collision.contacts) {
-            if (Vector3.Angle(contact.normal, Vector3.up) < maxSlope) {
+    private void OnCollisionStay(Collision collision)
+    {
+        foreach (ContactPoint contact in collision.contacts)
+        {
+            if (Vector3.Angle(contact.normal, Vector3.up) < maxSlope)
+            {
                 isFalling = false;
-                }
-
             }
 
         }
 
-    private void OnCollisionExit(Collision collision) {
-        isFalling = true;
-        }
-
     }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        isFalling = true;
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Traps"))
+        {
+            IsInTraps = true;
+        }
+        if (collision.gameObject.CompareTag("Victory"))
+        {
+            IsInVictory = true;
+        }
+    }
+
+}
+

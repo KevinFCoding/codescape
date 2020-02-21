@@ -37,3 +37,7 @@ Codescape/Logs/
 Codescape/Assembly-CSharp.csproj
 
 Codescape/ProjectSettings/EditorBuildSettings.asset
+
+Codescape/ProjectSettings/
+
+Codescape/Assembly-CSharp.csproj~develop
