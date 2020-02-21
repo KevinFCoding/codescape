@@ -33,3 +33,7 @@ Codescape/obj/
 Codescape/Packages/manifest.json
 
 Codescape/Logs/
+
+Codescape/Assembly-CSharp.csproj
+
+Codescape/ProjectSettings/EditorBuildSettings.asset
