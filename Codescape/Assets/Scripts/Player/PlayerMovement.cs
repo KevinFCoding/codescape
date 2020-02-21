@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour {
     float m_InitialSpeed;
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour {
 
     float maxSlope = 90f;
 
+
     private void Awake() {
         m_Rigidbody = GetComponent<Rigidbody>();
         }
@@ -18,12 +20,17 @@ public class PlayerMovement : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         m_InitialSpeed = m_TranslationSpeed;
+
         }
 
     private void FixedUpdate() {
-        Movement();
-        Jump();
-        Run();
+
+        if (!InventoryUI.IsInventoryActivated()) {
+
+            Movement();
+            Jump();
+            Run();
+            }
         
     }
 

@@ -51,6 +51,7 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(Input.GetAxis("Jump") > 0)
         {
             Animate(JUMP_ANIMATION_BOOL);

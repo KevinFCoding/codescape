@@ -12,17 +12,16 @@ public class ItemPickUp : Interactable {
 
     public void PickUpKey() {
 
-        Debug.Log(IsInCollision);
 
         if (IsInCollision) {
             if (Input.GetAxis("Fire1") > 0) {
-                Destroy(gameObject);
-
                 Inventory.instance.AddItem(item);
                 Debug.Log("Object PickUp : " + item.name);
+                Destroy(gameObject);
+                this.ChangeOverlayState(false);
+
                 }
 
             }
         }
-
     }
